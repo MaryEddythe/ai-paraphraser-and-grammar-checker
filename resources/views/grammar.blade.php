@@ -115,7 +115,6 @@
             const problemText = text.slice(start, end);
             let underlinedText;
 
-            // Apply different styles based on the type of suggestion
             if (type === 'clarity' || type === 'conciseness') {
                 underlinedText = `<span class="suggestion clarity" data-message="${message}" data-replacement="${replacement}">${problemText}</span>`;
             } else {

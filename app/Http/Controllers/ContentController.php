@@ -151,7 +151,7 @@ private function parseGrammarSuggestions($text)
                 'text' => $line,
                 'type' => 'conciseness',
                 'message' => 'This sentence is wordy. Consider making it more concise.',
-                'replacement' => $this->simplifySentence($line), // Example replacement
+                'replacement' => $this->simplifySentence($line),
             ];
         }
     }
