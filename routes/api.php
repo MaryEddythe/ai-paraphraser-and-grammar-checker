@@ -1,5 +1,5 @@
 <?php
-use App\Http\Controllers\ParaphraseController;
+use App\Http\Controllers\ContentController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -13,7 +13,7 @@ use Illuminate\Support\Facades\Route;
 | is assigned the "api" middleware group. Enjoy building your API!
 |
 */
-Route::post('/paraphrase', [ParaphraseController::class, 'paraphrase']);
+Route::post('/paraphrase', [ContentController::class, 'paraphrase']);
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
