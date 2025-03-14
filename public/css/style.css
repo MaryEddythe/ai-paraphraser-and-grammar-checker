@@ -85,18 +85,144 @@ body {
     background: #0056b3;
 }
 .suggestion {
-    text-decoration: underline wavy red;
+    text-decoration: underline wavy;
     cursor: pointer;
+}
+
+.suggestion.correctness {
+    text-decoration-color: red;
+}
+
+.suggestion.clarity, .suggestion.conciseness {
+    text-decoration-color: blue;
+}
+
+.suggestion.enhancement {
+    text-decoration-color: #FFD700;
 }
 
 .tooltip {
     position: absolute;
     background-color: #333;
     color: #fff;
-    padding: 5px;
-    border-radius: 3px;
+    padding: 8px 12px;
+    border-radius: 4px;
     font-size: 14px;
     z-index: 1000;
+    max-width: 250px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.tooltip-content {
+    margin-bottom: 5px;
+}
+
+.tooltip-actions {
+    display: flex;
+    justify-content: space-between;
+}
+
+.tooltip-actions button {
+    background: #007bff;
+    color: white;
+    border: none;
+    padding: 3px 8px;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 12px;
+}
+
+.tooltip-actions button:hover {
+    background: #0056b3;
+}
+/* Keep your existing CSS and add these styles */
+
+.suggestion {
+    text-decoration: underline wavy;
+    cursor: pointer;
+}
+
+.suggestion.correctness {
+    text-decoration-color: red;
+}
+
+.suggestion.clarity, .suggestion.conciseness {
+    text-decoration-color: blue;
+}
+
+.suggestion.enhancement {
+    text-decoration-color: #FFD700; /* Gold/yellow color */
+}
+
+/* Tooltip styling */
+.tooltip {
+    position: absolute;
+    background-color: #333;
+    color: #fff;
+    padding: 8px 12px;
+    border-radius: 4px;
+    font-size: 14px;
+    z-index: 1000;
+    max-width: 250px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.tooltip-content {
+    margin-bottom: 5px;
+}
+
+.tooltip-actions {
+    display: flex;
+    justify-content: space-between;
+}
+
+.tooltip-actions button {
+    background: #007bff;
+    color: white;
+    border: none;
+    padding: 3px 8px;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 12px;
+}
+
+.tooltip-actions button:hover {
+    background: #0056b3;
+}
+
+/* Legend for the underlines */
+.suggestion-legend {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 15px;
+    padding: 10px;
+    background: #f8f9fa;
+    border-radius: 5px;
+}
+
+.legend-item {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.legend-color {
+    width: 20px;
+    height: 10px;
+    border-radius: 2px;
+}
+
+.legend-color.red {
+    background-color: red;
+}
+
+.legend-color.blue {
+    background-color: blue;
+}
+
+.legend-color.yellow {
+    background-color: #FFD700;
 }
 /* Modal styling */
 .modal-content {

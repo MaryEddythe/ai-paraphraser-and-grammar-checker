@@ -107,5 +107,38 @@
                 writingGoalsModal.hide();
             });
         });
+
+        function displaySuggestions(text, suggestions) {
+        let highlightedText = text;
+        suggestions.forEach(suggestion => {
+            const { start, end, message, replacement, type } = suggestion;
+            const problemText = text.slice(start, end);
+            let underlinedText;
+
+            // Apply different styles based on the type of suggestion
+            if (type === 'clarity' || type === 'conciseness') {
+                underlinedText = `<span class="suggestion clarity" data-message="${message}" data-replacement="${replacement}">${problemText}</span>`;
+            } else {
+                underlinedText = `<span class="suggestion correctness" data-message="${message}" data-replacement="${replacement}">${problemText}</span>`;
+            }
+
+            highlightedText = highlightedText.replace(problemText, underlinedText);
+        });
+
+        colorCodedText.innerHTML = highlightedText;
+
+        const underlinedSuggestions = document.querySelectorAll('.suggestion');
+        underlinedSuggestions.forEach(suggestion => {
+            suggestion.addEventListener('mouseover', function () {
+                showTooltip(this);
+            });
+            suggestion.addEventListener('mouseout', function () {
+                hideTooltip();
+            });
+            suggestion.addEventListener('click', function () {
+                applySuggestion(this);
+            });
+        });
+    }
     </script>
 @endsection

@@ -146,10 +146,23 @@ private function parseGrammarSuggestions($text)
                 'message' => 'Improve clarity.',
                 'replacement' => str_replace('unclear', 'clear', $line), // Example replacement
             ];
+        } elseif (str_contains($line, 'wordy')) {
+            $suggestions[] = [
+                'text' => $line,
+                'type' => 'conciseness',
+                'message' => 'This sentence is wordy. Consider making it more concise.',
+                'replacement' => $this->simplifySentence($line), // Example replacement
+            ];
         }
     }
 
     return $suggestions;
+}
+
+private function simplifySentence($sentence)
+{
+    // Example logic to simplify a sentence
+    return preg_replace('/\bvery\b|\breally\b|\bquite\b/i', '', $sentence); // Remove unnecessary words
 }
 }
 
