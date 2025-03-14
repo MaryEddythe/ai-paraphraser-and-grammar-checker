@@ -1,0 +1,46 @@
+/* Custom Bootstrap Styling */
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    max-width: 800px;
+}
+
+.container-box {
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+h1 {
+    color: #007bff;
+    text-align: center;
+    font-weight: bold;
+}
+
+p {
+    text-align: center;
+    color: #6c757d;
+}
+
+textarea {
+    resize: none;
+}
+
+.result-box {
+    margin-top: 8px;
+}
+
+.paraphrase-option {
+    background: #f8f9fa;
+    border-radius: 5px;
+    padding: 10px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 10px;
+}

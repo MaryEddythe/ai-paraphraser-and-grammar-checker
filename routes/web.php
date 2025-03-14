@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\ParaphraseController;
+use App\Http\Controllers\ContentController;
 
-Route::get('/', [ParaphraseController::class, 'showForm']);
-Route::match(['get', 'post'], '/paraphrase', [ParaphraseController::class, 'paraphrase']);
+Route::get('/', [ContentController::class, 'showForm']);
+Route::match(['get', 'post'], '/paraphrase', [ContentController::class, 'paraphrase']);
