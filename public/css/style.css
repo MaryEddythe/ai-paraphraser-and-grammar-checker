@@ -6,11 +6,7 @@ body {
     font-family: Arial, sans-serif;
 }
 
-.container {
-    max-width: 800px;
-}
-
-.container-box {
+.container, .container-box {
     max-width: 800px;
     margin: 0 auto;
     padding: 20px;
@@ -31,29 +27,7 @@ body {
     border: 1px solid #ddd;
 }
 
-.suggestion-item {
-    padding: 10px;
-    margin-bottom: 5px;
-    background: #f8f9fa;
-    border-radius: 5px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.suggestion-item button {
-    background: #007bff;
-    color: white;
-    border: none;
-    padding: 5px 10px;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-.suggestion-item button:hover {
-    background: #0056b3;
-}
-.suggestions-box {
+.suggestions-box, .result-box {
     margin-top: 20px;
     padding: 15px;
     background: #f8f9fa;
@@ -72,18 +46,20 @@ body {
     align-items: center;
 }
 
-.suggestion-item button {
+.suggestion-item button, .tooltip-actions button {
     background: #007bff;
     color: white;
     border: none;
     padding: 5px 10px;
     border-radius: 5px;
     cursor: pointer;
+    font-size: 12px;
 }
 
-.suggestion-item button:hover {
+.suggestion-item button:hover, .tooltip-actions button:hover {
     background: #0056b3;
 }
+
 .suggestion {
     text-decoration: underline wavy;
     cursor: pointer;
@@ -122,75 +98,6 @@ body {
     justify-content: space-between;
 }
 
-.tooltip-actions button {
-    background: #007bff;
-    color: white;
-    border: none;
-    padding: 3px 8px;
-    border-radius: 3px;
-    cursor: pointer;
-    font-size: 12px;
-}
-
-.tooltip-actions button:hover {
-    background: #0056b3;
-}
-/* Keep your existing CSS and add these styles */
-
-.suggestion {
-    text-decoration: underline wavy;
-    cursor: pointer;
-}
-
-.suggestion.correctness {
-    text-decoration-color: red;
-}
-
-.suggestion.clarity, .suggestion.conciseness {
-    text-decoration-color: blue;
-}
-
-.suggestion.enhancement {
-    text-decoration-color: #FFD700; /* Gold/yellow color */
-}
-
-/* Tooltip styling */
-.tooltip {
-    position: absolute;
-    background-color: #333;
-    color: #fff;
-    padding: 8px 12px;
-    border-radius: 4px;
-    font-size: 14px;
-    z-index: 1000;
-    max-width: 250px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-}
-
-.tooltip-content {
-    margin-bottom: 5px;
-}
-
-.tooltip-actions {
-    display: flex;
-    justify-content: space-between;
-}
-
-.tooltip-actions button {
-    background: #007bff;
-    color: white;
-    border: none;
-    padding: 3px 8px;
-    border-radius: 3px;
-    cursor: pointer;
-    font-size: 12px;
-}
-
-.tooltip-actions button:hover {
-    background: #0056b3;
-}
-
-/* Legend for the underlines */
 .suggestion-legend {
     display: flex;
     justify-content: center;
@@ -224,25 +131,15 @@ body {
 .legend-color.yellow {
     background-color: #FFD700;
 }
-/* Modal styling */
+
 .modal-content {
     border-radius: 10px;
 }
 
-.modal-header {
-    border-bottom: 1px solid #dee2e6;
+.modal-header, .modal-footer {
+    border-color: #dee2e6;
 }
 
-.modal-footer {
-    border-top: 1px solid #dee2e6;
-}
-.result-box {
-    margin-top: 20px;
-    padding: 15px;
-    background: #f8f9fa;
-    border-radius: 5px;
-    border: 1px solid #ddd;
-}
 h1 {
     color: #007bff;
     text-align: center;
@@ -256,19 +153,13 @@ p {
 
 textarea {
     resize: none;
-}
-
-.result-box {
-    margin-top: 8px;
-}
-
-.result-box textarea {
     background: #f8f9fa;
     border: 1px solid #ddd;
     border-radius: 5px;
     padding: 10px;
     font-family: Arial, sans-serif;
 }
+
 .paraphrase-option {
     background: #f8f9fa;
     border-radius: 5px;
